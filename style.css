@@ -1,0 +1,288 @@
+/* 
+<=============>
+ Root elements
+<=============>
+*/
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #f85151;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #bb0000;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #d00000;
+}
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+  }
+
+body{
+    background-image: linear-gradient(to right, rgb(18, 18, 18) , rgb(35, 35, 35));
+    overflow: visible;
+    font-family: cursive;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+h1{
+    color: white;
+    font-family: cursive;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h3{
+    color: white;
+    font-family: cursive;
+}
+
+/*
+<===========================>
+ Elements for all undersites
+<===========================>
+*/
+
+a{
+    text-decoration: none;
+}
+
+.header{
+    width: 100%;
+    height: 75px;
+    padding-bottom: 25px;
+    line-height: 75px;
+    position: relative;
+    background-color: rgb(106, 0, 0);
+    display: grid;
+    place-items: center;
+    opacity: 0.9;
+
+}
+    
+.header ul{
+    text-align: center;
+}
+    
+.notib{
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 0px 30px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    font-family: cursive;
+}
+    
+.header li{
+    display: inline-block;
+}
+    
+.header ul li{
+    position: relative;
+}
+    
+.header ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #bb0000;
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    transition: 0.5s;
+}
+    
+.header ul li:hover:after{
+    width: 100%;
+}
+
+.btn{
+    appearance: none;
+    border: none;
+    background-image: linear-gradient(180deg, rgb(131, 0, 0), rgb(161, 0, 0));
+    font-family: 'Teko', sans-serif;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+    min-height: 30px;
+    min-width: 100px;
+    font-size: 20px;
+    padding: 10px;
+    transform: scale(1);
+    transition: all 150ms ease-in;
+    border-radius: 10px;
+}
+
+.btn:hover{
+    outline: 1px solid red;
+    background-image: linear-gradient(180deg, rgb(216, 0, 0), rgb(136, 0, 0));
+    transform: scale(0.9);
+    transition: all 150ms ease-in;
+}
+
+.textbox{
+    appearance: none;
+    border-bottom: 3px solid rgb(143, 0, 0);
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    background-color: rgb(39, 39, 39);
+    width: 300px;
+    height: 30px;
+    margin-bottom: 20px;
+    margin-inline: auto;
+    color: white;
+    padding-inline: 10px;
+}
+
+.textbox:focus{
+    outline: none;
+}
+
+.contentWrapper{
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+.contentWrapper input:focus + .placeholder, .contentWrapper input:not(:placeholder-shown) + .placeholder {
+    transform: translateY(-100%) scale(0.7);
+    color: white;
+    padding-inline: 3px;
+}
+
+.contentWrapper .placeholder {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 30%;
+    left: 50px;
+    pointer-events: none;
+    transition: all 150ms ease-in-out;
+    transform-origin: 0 0;
+    color: rgb(202, 202, 202);
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
+.photo{
+    height: 300px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.vegetable{
+    text-decoration: none;
+    display: grid;
+    margin-top: 30px;
+    float: left;
+    height: 500px;
+    overflow: hidden;
+    width: 300px;
+    background-color: #1d1d1d;
+    margin-inline: 10px;
+    place-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 5px;
+    transform: scale(1);
+    border-radius: 20px;
+    user-select: none;
+    text-align: center;
+}
+
+.vegetable:hover{
+    transform: scale(1.01);
+    box-shadow: rgba(255, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+}
+
+
+.title{
+    font-family: cursive;
+}
+
+.container{
+    left: 50%;
+    transform: translate(-50%, 50%);
+    position: relative;
+    width: 400px;
+    min-height: 100px;
+    background-color: rgb(29, 29, 29);
+    padding: 10px;
+    font-family: cursive;
+    text-align: center;
+    box-shadow: 0px 0px 23px 8px rgb(32, 32, 32);
+}
+
+.joaana{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.profile{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px; /* Apply negative top and left margins to truly center the element */
+}
+
+.profile-content{
+    margin-top: 70px;
+    text-align: center;
+    font-family: cursive;
+    min-height: 170px;
+    width: 200px;
+    background-color: rgb(143, 0, 0);
+    border-radius: 10px;
+    transform: scale(1);
+    transition: 0.1s;
+    padding: 10px;
+    user-select: none;
+    z-index: 1;
+}
+
+.profile-content:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 40px;
+}
+
+.profile-content:hover + .profile-nick{
+    margin-top: 7px;
+}
+
+.profile-photo{
+    margin-top: 15px;
+    height: 120px;
+    width: 120px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0px 0px 23px 3px rgb(32, 32, 32);
+}
+
+.profile-nick{
+    margin-top: -25px;
+    transition: 0.2s;
+    z-index: 0;
+    text-align: center;
+}
+
+.profile-header{
+    margin-top: -20px;
+}
